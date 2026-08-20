@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Hotel Management System</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            <div class="logo-icon">🏨</div>
+            <div>
+                <h2>Grand Stay</h2>
+                <span>Hotel Management</span>
+            </div>
+        </div>
+
+        <nav>
+
+            <a href="index.html" class="nav-link active">
+                <span>📊</span>
+                Dashboard
+            </a>
+
+            <a href="customers.html" class="nav-link">
+                <span>👥</span>
+                Customers
+            </a>
+
+            <a href="rooms.html" class="nav-link">
+                <span>🛏️</span>
+                Rooms
+            </a>
+
+            <a href="bookings.html" class="nav-link">
+                <span>📅</span>
+                Bookings
+            </a>
+
+            <a href="payments.html" class="nav-link">
+                <span>💳</span>
+                Payments
+            </a>
+
+            <a href="reports.html" class="nav-link">
+                <span>📈</span>
+                Reports
+            </a>
+
+        </nav>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+
+    <main class="main-content">
+
+        <!-- TOP BAR -->
+
+        <header class="topbar">
+
+            <div>
+                <h1>Dashboard</h1>
+                <p>Welcome back! Here's your hotel overview.</p>
+            </div>
+
+            <a href="customers.html" class="primary-btn">
+                + Add Customer
+            </a>
+
+        </header>
+
+
+        <!-- STAT CARDS -->
+
+        <section class="stats-grid">
+
+            <div class="stat-card">
+
+                <div class="stat-icon blue">
+                    👥
+                </div>
+
+                <div>
+                    <p>Total Customers</p>
+                    <h2 id="totalCustomers">0</h2>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon green">
+                    🛏️
+                </div>
+
+                <div>
+                    <p>Available Rooms</p>
+                    <h2 id="availableRooms">0</h2>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon orange">
+                    🔑
+                </div>
+
+                <div>
+                    <p>Occupied Rooms</p>
+                    <h2 id="occupiedRooms">0</h2>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon purple">
+                    📅
+                </div>
+
+                <div>
+                    <p>Total Bookings</p>
+                    <h2 id="totalBookings">0</h2>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CONTENT GRID -->
+
+        <section class="dashboard-grid">
+
+            <!-- ROOM STATUS -->
+
+            <div class="panel">
+
+                <div class="panel-header">
+
+                    <div>
+                        <h2>Room Status</h2>
+                        <p>Current room availability</p>
+                    </div>
+
+                    <a href="rooms.html" class="view-link">
+                        View All
+                    </a>
+
+                </div>
+
+                <div id="roomStatus" class="room-list">
+
+                    <div class="loading">
+                        Loading rooms...
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- RECENT BOOKINGS -->
+
+            <div class="panel">
+
+                <div class="panel-header">
+
+                    <div>
+                        <h2>Recent Bookings</h2>
+                        <p>Latest reservations</p>
+                    </div>
+
+                    <a href="bookings.html" class="view-link">
+                        View All
+                    </a>
+
+                </div>
+
+                <div id="recentBookings">
+
+                    <div class="loading">
+                        Loading bookings...
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- QUICK ACTIONS -->
+
+        <section class="quick-actions">
+
+            <h2>Quick Actions</h2>
+
+            <div class="action-grid">
+
+                <a href="customers.html" class="action-card">
+                    <span>👤</span>
+                    <div>
+                        <h3>Add Customer</h3>
+                        <p>Register a new hotel customer</p>
+                    </div>
+                </a>
+
+
+                <a href="rooms.html" class="action-card">
+                    <span>🛏️</span>
+                    <div>
+                        <h3>Manage Rooms</h3>
+                        <p>View and manage hotel rooms</p>
+                    </div>
+                </a>
+
+
+                <a href="bookings.html" class="action-card">
+                    <span>📅</span>
+                    <div>
+                        <h3>New Booking</h3>
+                        <p>Create a new reservation</p>
+                    </div>
+                </a>
+
+
+                <a href="reports.html" class="action-card">
+                    <span>📊</span>
+                    <div>
+                        <h3>View Reports</h3>
+                        <p>Analyze hotel information</p>
+                    </div>
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="js/dashboard.js"></script>
+
+</body>
+</html>

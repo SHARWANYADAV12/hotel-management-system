@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Bookings - Hotel Management System</title>
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+</head>
+
+
+<body>
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <div class="logo-icon">
+                🏨
+            </div>
+
+            <div>
+                <h2>Grand Stay</h2>
+
+                <span>
+                    Hotel Management
+                </span>
+            </div>
+
+        </div>
+
+
+        <nav>
+
+            <a href="index.html"
+               class="nav-link">
+                📊 Dashboard
+            </a>
+
+            <a href="customers.html"
+               class="nav-link">
+                👥 Customers
+            </a>
+
+            <a href="rooms.html"
+               class="nav-link">
+                🛏️ Rooms
+            </a>
+
+            <a href="bookings.html"
+               class="nav-link active">
+                📅 Bookings
+            </a>
+
+            <a href="payments.html"
+               class="nav-link">
+                💳 Payments
+            </a>
+
+            <a href="reports.html"
+               class="nav-link">
+                📈 Reports
+            </a>
+
+        </nav>
+
+    </aside>
+
+
+    <main class="main-content">
+
+
+        <header class="topbar">
+
+            <div>
+
+                <h1>
+                    Bookings
+                </h1>
+
+                <p>
+                    Manage hotel reservations
+                </p>
+
+            </div>
+
+        </header>
+
+
+        <!-- BOOKING FORM -->
+
+        <section class="panel"
+                 style="margin-bottom:25px;">
+
+            <div class="panel-header">
+
+                <div>
+
+                    <h2>
+                        Create Booking
+                    </h2>
+
+                    <p>
+                        Select customer and available room
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <form id="bookingForm">
+
+
+                <div class="form-grid">
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Customer
+                        </label>
+
+                        <select
+                            id="customer_id"
+                            required>
+
+                            <option value="">
+                                Select customer
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Room
+                        </label>
+
+                        <select
+                            id="room_id"
+                            required>
+
+                            <option value="">
+                                Select available room
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Check In
+                        </label>
+
+                        <input
+                            type="date"
+                            id="check_in"
+                            required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Check Out
+                        </label>
+
+                        <input
+                            type="date"
+                            id="check_out"
+                            required>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="primary-btn">
+
+                    Create Booking
+
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- BOOKINGS TABLE -->
+
+        <section class="panel">
+
+            <div class="panel-header">
+
+                <div>
+
+                    <h2>
+                        Booking List
+                    </h2>
+
+                    <p>
+                        All hotel reservations
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                ID
+                            </th>
+
+                            <th>
+                                Customer
+                            </th>
+
+                            <th>
+                                Phone
+                            </th>
+
+                            <th>
+                                Room
+                            </th>
+
+                            <th>
+                                Check In
+                            </th>
+
+                            <th>
+                                Check Out
+                            </th>
+
+                            <th>
+                                Status
+                            </th>
+
+                            <th>
+                                Action
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="bookingTable">
+
+                        <tr>
+
+                            <td colspan="8"
+                                class="loading">
+
+                                Loading bookings...
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="js/bookings.js"></script>
+
+</body>
+
+</html>

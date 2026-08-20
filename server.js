@@ -981,10 +981,10 @@ app.get("/api/reports", (req, res) => {
 // SERVER
 // ==========================================
 
-app.listen(PORT, () => {
+app.listen(PORT, "0.0.0.0", () => {
 
     console.log(
-        `Hotel Management System running at http://localhost:${PORT}`
+        `Hotel Management System running on port ${PORT}`
     );
 
 });
